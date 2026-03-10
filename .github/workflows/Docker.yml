@@ -20,8 +20,8 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
         
 
-      - name: Build Docker Image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}html-devops:latest .
+      -  name: Build Docker image
+         run: docker build -t ${{ secrets.Github_Action_Token }}/html-devops:latest .
 
-      - name: Push Docker Image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}html-devops:latest
+      - name: Push Docker image
+        run: docker push ${{ secrets.Github_action_token }}/html-devops:latest
