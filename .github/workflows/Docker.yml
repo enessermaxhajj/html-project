@@ -17,7 +17,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: enessermaxhaj
-          password: ${{ secrets.DOCKER_HUB_TOKEN }   
+          password: ${{secrets.DOCKER_HUB_TOKEN}}   
           
       - name: Build Docker image
         run: docker buildx build -t ${{ secrets.DOCKER}}enessermaxhaj/html-project:latest .
