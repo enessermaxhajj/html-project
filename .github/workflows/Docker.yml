@@ -21,7 +21,7 @@ jobs:
         
 
       -  name: Build Docker image
-         run: docker build -t ${{ secrets.Github_Action_Token }} html-devops:latest .
+         run: docker build -t ${{ secrets.DOCKER_HUB_TOKEN }} html-devops:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.Github_action_token }} html-devops:latest
+        run: docker push ${{ secrets.DOCKER_HUB_TOKEN}} html-devops:latest
