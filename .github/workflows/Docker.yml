@@ -21,9 +21,9 @@ jobs:
         
 
       - name: Build Docker image
-        run: docker buildx build -t ${{ secrets.DOCKER_enessermaxhaj }}html-project:latest .
+        run: docker buildx build -t ${{ secrets.DOCKER_HUB_TOKEN}}enessermaxhaj-html-project:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_enessermaxhaj }}html-project:latest
+        run: docker push ${{ secrets.DOCKER_HUB_TOKEN}}html-project:latest
 
     
